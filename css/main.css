@@ -1,0 +1,119 @@
+/*reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*estilos generales*/
+
+body{
+    background-color: whitesmoke;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+
+/*estilos de pantallas de celulares*/
+
+/*estilos de header*/
+
+.color-menu{
+    color: gray;
+}
+
+.color-menu:hover{
+    border-bottom: 2px solid tomato;
+    color: red;
+    
+}
+
+
+
+/*estilos de main*/
+
+main div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main{
+    height: 70vh;
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 33%);
+    gap: 1rem;
+    margin: 1rem 3rem 3rem 3rem;
+}
+
+main .imagen-dos,  .imagen-cinco{
+    display: none;
+
+}
+
+/*estilos de footer*/
+
+footer p{
+    text-align: center;
+    color: black;
+}
+
+/* mq de tablet*/
+
+@media screen and (min-width:600px)
+
+/*estilos de main*/
+
+.main {
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-rows: repeat(2,  50%) ;
+}
+
+.imagen-uno, .imagen-tres{
+    grid-row: span 1;
+}
+
+.imagen-cuatro{
+    grid-column: span 2;
+}
+
+/* mq pantallas de escritorio*/
+
+@media screen and (min-width:1024px){
+main  .imagen-dos, .imagen-cinco{
+    display: block;
+}
+
+main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40%  40% 20%;
+}
+
+.imagen-uno,  .imagen-tres{
+    grid-row: span 2 ;
+}
+
+.imagen-dos,  .imagen-cuatro{
+    grid-column: span 1;
+}
+
+.imagen-cinco{
+    grid-column: span 2;
+}
+
+
+
+
+footer{
+    text-align: center;
+    margin-top: 30px;
+    
+}
+
+img{
+    width: 50px;
+    height: 50px;
+}
+
